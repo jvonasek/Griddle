@@ -1,0 +1,6 @@
+.Score {
+  font-size: 26px;
+  &-label {
+    margin-bottom: 5px;
+  }
+}
