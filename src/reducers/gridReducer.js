@@ -1,13 +1,13 @@
 import * as utils from '../utils'
-import * as gameConstans from '../constants/GameConstants'
+import * as gameConstants from '../constants/GameConstants'
 import { TOGGLE_CELLS, NEW_GAME } from '../constants/ActionTypes'
 import _ from 'lodash'
 
 const initialState = {
   cells: utils.createGameGrid(),
   solution: [],
-  xSize: gameConstans.GRID_X_SIZE,
-  ySize: gameConstans.GRID_Y_SIZE,
+  xSize: gameConstants.GRID_X_SIZE,
+  ySize: gameConstants.GRID_Y_SIZE,
 }
 
 const findSiblings = (coords, state) => {
