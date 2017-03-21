@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-import { countPercent } from '../utils'
+import { calculatePercent } from '../utils'
 import GSAP from 'react-gsap-enhancer'
 import { TimelineMax } from 'gsap'
 
@@ -51,7 +51,7 @@ class Game extends Component {
   render() {
     const { grid, game } = this.props.store
     const activeCount = _.filter(grid.cells, {active: true}).length;
-    const percent = countPercent(activeCount, grid.cells.length)
+    const percent = calculatePercent(activeCount, grid.cells.length)
     const seed = game.seed
 
     return (

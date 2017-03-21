@@ -29,7 +29,7 @@ class Grid extends Component {
   }
 
   renderCells(cells) {
-    const cellWidth = 100 / this.props.xSize;
+    const cellWidth = 100 / this.props.xSize
     return cells.map((cell) => {
       return <Cell width={cellWidth} key={cell.x + '-' + cell.y} cell={cell} toggleCells={this.props.toggleCells} />
     })

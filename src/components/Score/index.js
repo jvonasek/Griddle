@@ -1,2 +1,2 @@
-import Score from './Score';
-export default Score;
+import Score from './Score'
+export default Score

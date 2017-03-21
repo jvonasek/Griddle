@@ -1,2 +1,2 @@
-import SeedInput from './SeedInput';
-export default SeedInput;
+import SeedInput from './SeedInput'
+export default SeedInput

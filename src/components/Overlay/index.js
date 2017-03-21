@@ -1,2 +1,2 @@
-import Overlay from './Overlay';
-export default Overlay;
+import Overlay from './Overlay'
+export default Overlay

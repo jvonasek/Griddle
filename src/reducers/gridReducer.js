@@ -10,19 +10,8 @@ const initialState = {
   ySize: gameConstants.GRID_Y_SIZE,
 }
 
-const findSiblings = (coords, state) => {
-  const middle = coords
-  const left   = {x: coords.x - 1, y: coords.y}
-  const right  = {x: coords.x + 1, y: coords.y}
-  const top    = {x: coords.x, y: coords.y - 1}
-  const bottom = {x: coords.x, y: coords.y + 1}
-
-  return [left, right, middle, top, bottom];
-
-}
-
 const toggleCells = (cells, originCellCoords) => {
-  const siblings = findSiblings(originCellCoords, cells);
+  const siblings = utils.findSiblings(originCellCoords, cells)
   return cells.map((cell) => {
     let shouldCellUpdate = _.filter(siblings, {x: cell.x, y: cell.y}).length > 0
     return shouldCellUpdate ? { ...cell, active: !cell.active } : { ...cell }
@@ -36,14 +25,14 @@ const newRandomGame = (state, seed) => {
 
   const minIterations = Math.ceil(cells.length / 10)
   const maxIterations = Math.ceil(cells.length / 5)
-  const iterations = utils.randomBetweenSeeded(minIterations, maxIterations, seed);
+  const iterations = utils.getNumberInRangeBySeed(minIterations, maxIterations, seed)
 
   for (let i = 0; i < iterations; i++) {
     // modify seed with each iteration
-    let modifiedSeed = seed + i;
+    let modifiedSeed = seed + i
 
     // get random x/y coords
-    let randomCellCoords = utils.getRandomGridCellCoordsSeeded(modifiedSeed)
+    let randomCellCoords = utils.getGridCellCoordsBySeed(modifiedSeed)
 
     // if random cell is not a duplicate, add it to solution and modify the grid cells
     if (!_.some(solution, randomCellCoords)) {
