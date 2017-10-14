@@ -9,10 +9,10 @@
   width: 100%;
   height: 10px;
   z-index: -1;
+}
 
-  &-inner {
-    transition: width .5s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    height: 100%;
-    background-color: #D74B4B;
-  }
+.ProgressBar-inner {
+  transition: width .5s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  height: 100%;
+  background-color: #D74B4B;
 }

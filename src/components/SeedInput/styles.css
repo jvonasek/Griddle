@@ -1,0 +1,19 @@
+.SeedInput {
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.SeedInput-button {
+  width: 30%;
+  float: left;
+}
+
+.SeedInput-input {
+  width: 70%;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}

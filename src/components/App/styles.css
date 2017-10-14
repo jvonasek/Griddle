@@ -1,3 +1,7 @@
+.GameContainer {
+  max-width: 640px;
+  margin: 0 auto;
+}
 .Grid {
   text-align: center;
   perspective: 200px;
